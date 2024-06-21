@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import { Head } from '@inertiajs/vue3';
+
+import authenticatedLayout from '../../layouts/authenticatedLayout.vue';
 
 
 
-const props = defineProps({
+defineProps({
     users: Object,
-    title:String,
+    title: String,
 })
 </script>
 <template>
-    <Head :title="title" />
-    <div>
-        hii
-    </div>
+
+    <authenticated-layout>
+        {{ users ?? 'ss' }}
+    </authenticated-layout>
 </template>

@@ -8,7 +8,8 @@ export default class UsersController {
 
         let data = {
             users: await User.all(),
-            title: 'Users'
+            title: 'Users',
+            subtitle: 'List of users',
         }
         return inertia.render('users/index', data)
     }
